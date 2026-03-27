@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Teste Melhorado</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #mensagem {
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Teste Interativo</h1>
+        <p>Digite seu nome:</p>
+
+        <input type="text" id="nome" placeholder="Seu nome">
+
+        <button onclick="mostrarNome()">Enviar</button>
+
+        <div id="mensagem"></div>
+    </div>
+
+    <script>
+        function mostrarNome() {
+            let nome = document.getElementById("nome").value;
+
+            if (nome.trim() === "") {
+                alert("Digite um nome!");
+            } else {
+                document.getElementById("mensagem").innerText = 
+                    "Olá, " + nome + "! 👋";
+            }
+        }
+    </script>
+
+</body>
+</html>
